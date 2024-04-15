@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+.flex-container {
+    justify-content: center;
+    display: flex;
+}
+
+input {
+    margin-left: 25%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+
+button {
+    margin-left: 37%;
+}
+
+.flex-container > div {
+    padding: 2%;
+    background-color: beige;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#bsod {
+    display: none;
+    height: 100vh;
+    background-image: url(../img/bsod.png);
+    background-size: cover;
+}
