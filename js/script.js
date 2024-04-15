@@ -1,20 +1,23 @@
 "use strict";
 
-function Bsod() {
-    var elements = document.body.getElementsByTagName("*");
-    for (var i = 0; i < elements.length; i++) {
-        elements[i].style.display = "none";
-    }
-    document.getElementById("bsod").style.display = "block";
-}
-
-function MyFunc() {
-    document.getElementById("result").style.color = "red";
-    document.getElementById("result").value = "Result: Critical Error";
-    setTimeout(Bsod, 2500);
+function Calculator() {
+    document.getElementById("result").value = "Result: " + Math.floor(Math.random() * 1000);
 }
 
 // Huina
+let count = false;
+function Change() {
+    if (count == false) {
+        document.getElementById("new").style.display = "none";
+        document.getElementById("old").style.display = "flex";
+        count = true;
+    }
+    else {
+        document.getElementById("old").style.display = "none";
+        document.getElementById("new").style.display = "flex";
+        count = false;
+    }
+}
 
 setInterval(function() {
 let currentDate = new Date();
@@ -39,3 +42,21 @@ alert(5 + 6);
 console.log(5 + 6);
 }
 
+function Bsod1() {
+    var elements = document.body.getElementsByTagName("*");
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].style.display = "none";
+    }
+    document.getElementById("bsod").style.display = "block";
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("result").value = "Result:";
+    document.getElementById("resultold").value = "Result:";
+});
+
+function Bsod() {
+    document.getElementById("resultold").style.color = "red";
+    document.getElementById("resultold").value = "Result: Critical Error";
+    setTimeout(Bsod1, 2500);
+}

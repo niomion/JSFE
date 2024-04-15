@@ -10,16 +10,31 @@
 <body>
     <div id="bsod"> </div>
     <div class="flex-container"><h1 id="clock"> ##:##:## </h1></div>
-<div class="flex-container">
+    <div class="flex-container" id="new">
+        <div>
+            <h1 id="head"> Correct Calculator v2.0 </h1>
+            <form action="">
+                <input type="text" name="fname"><br>
+                <button type="button" onclick='Calculator()'> Calculate!</button>
+                <br>
+                <input type="text" readonly id="result" value="Result:"><br>
+            </form>
+        </div>
+    </div>
+    
+
+<div class="flex-containerold" id="old">
     <div>
         <h1 id="head"> Stable Calculator v1.0 </h1>
         <form action="">
             <input type="text" name="fname"><br>
-            <button type="button" onclick='MyFunc()'> Calculate!</button>
+            <button type="button" onclick='Bsod()'> Calculate!</button>
             <br>
-            <input type="text" readonly id="result" value="Result:"><br>
+            <input type="text" readonly id="resultold" value="Result:"><br>
         </form>
     </div>
 </div>
+<div style="display: fixed;"> <button class = "button1" type="button" onclick='Change()'> Change!</button> </div>
+
 </body>
 </html>
